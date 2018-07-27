@@ -1,0 +1,106 @@
+<template>
+	<div>
+		<div class="crumbs">
+			<el-breadcrumb separator="/">
+				<el-breadcrumb-item><i class="el-icon-date"></i> 表单</el-breadcrumb-item>
+				<el-breadcrumb-item>基本表单</el-breadcrumb-item>
+			</el-breadcrumb>
+		</div>
+		<div class="container">
+			<div class="form-box">
+				<el-form :model="warningLog" :rules="rules" ref="warningLog" label-width="100px" class="demo-warningLog">
+					<el-form-item label="告警日期" prop="warningDate">
+						<el-input :disabled="true" v-model="warningLog.warningDate"></el-input>
+					</el-form-item>
+					<el-form-item label="企业网站" prop="mailDom">
+						<el-input :disabled="true" v-model="warningLog.mailDom"></el-input>
+					</el-form-item>
+					<el-form-item label="渠道名称" prop="hrSiteType">
+						<el-input :disabled="true" v-model="warningLog.hrSiteType"></el-input>
+					</el-form-item>
+					<el-form-item label="告警状态" prop="warningStatus">
+						<el-select v-model="warningLog.warningStatus" placeholder="请选择告警状态">
+							<el-option v-for="option in options" :key="option.id" v-bind:value="option.value">{{option.text}}</el-option>
+						</el-select>
+					</el-form-item>
+					<el-form-item label="是否发送邮件" prop="isSendMail">
+						<el-switch v-model="warningLog.isSendMail" active-text="已发送" inactive-text="未发送"></el-switch>
+					</el-form-item>
+					<el-form-item label="errorMessage" prop="errorMessage">
+						<el-input autosize :disabled="true" type="textarea" v-model="warningLog.errorMessage"></el-input>
+					</el-form-item>
+					<el-form-item>
+						<el-button type="primary" @click="submitForm('warningLog')">保存</el-button>
+						<el-button @click="resetForm('warningLog')">重置</el-button>
+					</el-form-item>
+				</el-form>
+			</div>
+		</div>
+
+	</div>
+</template>
+
+<script>
+	import warningStatus from '@/config/warningStatus-config'
+	export default {
+		data: function(){
+			return {
+				warningLog: '',
+				options: warningStatus,
+				ruleForm: {
+					warningStatus:''
+				},
+				rules: {
+					warningStatus: [{
+						required: true,
+						message: '请选择告警状态',
+						trigger: 'change'
+					}]
+				},
+				url: '/ATSConfiguration/updateAutoPulishError'
+			};
+		},
+		created: function() {
+			var vm = this
+			console.log(this.$route.params.warningLog)
+			vm.$set(vm.$data, 'warningLog', this.$route.params.warningLog);
+		},
+		methods: {
+			submitForm(formName) {
+				var vm = this
+				console.log(vm.$route.params.warningLog)
+				console.log('vm.warningLog.warningStatus::::::'+ vm.warningLog.warningStatus)
+				vm.$refs[formName].validate((valid) => {
+					console.log(valid)
+					if(valid) {
+						var params = new URLSearchParams();
+						params.append("id", vm.warningLog.id);
+						params.append("warningStatus", vm.warningLog.warningStatus);
+						vm.$http({
+							method: 'post',
+							url: vm.url,
+							data: params
+						}).then((response) => {
+							console.log(response.data); //成功回调
+							if(response.data.status == 1){
+								this.$message.success('保存成功');
+						        this.$router.push('/table');
+							}else{
+								this.$message.error('保存失败');
+							}
+						}, (response) => {
+							//失败回调
+					        this.$message.error('保存失败');
+						})
+					} else {
+						this.$message.error('保存失败');
+						return false;
+					}
+				});
+			},
+			resetForm(formName) {
+				this.$refs[formName].resetFields();
+			}
+		}
+	}
+</script>

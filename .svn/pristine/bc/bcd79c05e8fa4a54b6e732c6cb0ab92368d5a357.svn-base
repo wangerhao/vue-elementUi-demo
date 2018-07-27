@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset=utf-8>
+		<meta name=viewport content="width=device-width,initial-scale=1">
+		<title>WarningLogSys</title>
+		<link href=/WaringLogSys/static/css/app.94cbc6809648e7bd0264764d22841169.css rel=stylesheet>
+		<link href=/WaringLogSys/static/css/app.94cbc6809648e7bd0264764d22841169.css rel=stylesheet>
+		<link href=/WaringLogSys/static/css/app.94cbc6809648e7bd0264764d22841169.css rel=stylesheet>
+		<link href=/WaringLogSys/static/css/app.94cbc6809648e7bd0264764d22841169.css rel=stylesheet>
+		<link href=/WaringLogSys/static/css/app.63f5959f28e8cdfffd653d6f8b9d89e4.css rel=stylesheet>
+		<link href=/WaringLogSys/static/css/app.0d7611db20e5a20ecffbd05ef39e6b3b.css rel=stylesheet>
+		<link href=/WaringLogSys/static/css/app.0d7611db20e5a20ecffbd05ef39e6b3b.css rel=stylesheet>
+		<link href=./static/css/app.f5bb9be92437c6907a0f20d76f73fd87.css rel=stylesheet>
+	</head>
+
+	<body>
+		<div id=app></div>
+		<script type=text/javascript src=/WaringLogSys/static/js/manifest.cd490a173a645768a11e.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/vendor.8e098371cf9c25d700f4.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/app.e90439cbedc00a510a6f.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/manifest.cd490a173a645768a11e.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/vendor.8e098371cf9c25d700f4.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/app.e90439cbedc00a510a6f.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/manifest.6ddd3286778e3b2977e8.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/vendor.8e098371cf9c25d700f4.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/app.e90439cbedc00a510a6f.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/manifest.6ddd3286778e3b2977e8.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/vendor.8e098371cf9c25d700f4.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/app.e90439cbedc00a510a6f.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/manifest.6867b86c09c531d0fd20.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/vendor.8e098371cf9c25d700f4.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/app.e90439cbedc00a510a6f.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/manifest.5a9f4f7279f0039aaf02.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/vendor.8e098371cf9c25d700f4.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/app.e90439cbedc00a510a6f.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/manifest.5a9f4f7279f0039aaf02.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/vendor.8e098371cf9c25d700f4.js></script>
+		<script type=text/javascript src=/WaringLogSys/static/js/app.e90439cbedc00a510a6f.js></script>
+		<script type=text/javascript src=./static/js/manifest.4e49b71c781a43847aa5.js></script>
+		<script type=text/javascript src=./static/js/vendor.91c8d3d8e9e8ac275b41.js></script>
+		<script type=text/javascript src=./static/js/app.7126cc7621906039c0d0.js></script>
+	</body>
+
+</html>
